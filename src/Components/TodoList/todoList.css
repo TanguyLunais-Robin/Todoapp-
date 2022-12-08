@@ -1,0 +1,187 @@
+.todoForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 45%;
+  height: 80px;
+  border-radius: 5px;
+  margin: auto;
+  background: var(--formBackground);
+  margin-top: 50px;
+}
+
+.createTodo {
+  margin: auto;
+  margin-left: 0;
+  width: 85%;
+  background: none;
+  border: none;
+  color: var(--textPrimary);
+}
+
+input:focus {
+  outline: none;
+}
+
+.submitTodo {
+  background: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 2px solid hsla(233, 14%, 35%, 0.699);
+  margin: auto;
+  cursor: pointer;
+}
+
+.submitTodo:hover {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.todoList {
+  width: 45%;
+  border-radius: 5px;
+  margin: auto;
+  background: var(--formBackground);
+  margin-top: 30px;
+  color: var(--textPrimary);
+  overflow: hidden;
+}
+
+.todoInfo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--textTertiary);
+  cursor: default;
+  flex-wrap: wrap;
+}
+
+.itemsLeft {
+  margin: 0 10px;
+}
+
+span {
+  font-size: 16px;
+}
+
+.middleButtons > * {
+  margin: 0 10px;
+  color: var(--textTertiary);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.middleButtons {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.middleButtons > *:hover,
+.clearButton:hover {
+  color: var(--textHover);
+}
+
+.clearButton {
+  cursor: pointer;
+  color: var(--textTertiary);
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.activeLink {
+  color: hsl(220, 98%, 61%);
+}
+
+@media screen and (max-width: 1100px) {
+  .todoForm {
+    width: 55%;
+    height: 70px;
+  }
+
+  .todoList {
+    width: 55%;
+  }
+
+  .todoInfo {
+    background-color: var(--background);
+    height: auto;
+  }
+
+  .itemsLeft,
+  .clearButton {
+    background: var(--formBackground);
+    width: 50%;
+    margin: 0;
+    height: 55px;
+    display: flex;
+    align-items: center;
+  }
+
+  .itemsLeft {
+    border-bottom-left-radius: 5px;
+    justify-content: flex-start;
+  }
+
+  .clearButton {
+    border-bottom-right-radius: 5px;
+    justify-content: flex-end;
+  }
+
+  span {
+    margin: 0 15px;
+    font-size: 14px;
+  }
+
+  .middleButtons {
+    order: 3;
+    margin: 20px 0 0 0;
+    background: var(--formBackground);
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middleButtons > * {
+    font-size: 14px;
+  }
+
+  .submitTodo {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .todoForm {
+    width: 90%;
+    height: 60px;
+  }
+
+  .todoList {
+    width: 90%;
+  }
+
+  .itemsLeft,
+  .clearButton {
+    height: 45px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  .middleButtons {
+    height: 45px;
+  }
+
+  .submitTodo {
+    height: 20px;
+    width: 20px;
+  }
+}
